@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/common_head_dependencies.ejs %>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CONTAINER START -->
+    <div class="container">
+        <% include partials/navbar.ejs %>
+
+        <!-- THREAD CREATOR CARD -->
+        <div class="card">
+            <div class="card-header">
+                <strong>THREAD TOPIC</strong>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>THREAD CONTENT</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Author</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <!-- END OF THREAD CREATOR CARD -->
+
+        <!-- THREAD CONTRIBUTOR CARDS -->
+        <% for(let post of posts){ %>
+        <div class="card">
+            <div class="card-header">
+                <strong>THREAD TOPIC</strong>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>THREAD CONTENT</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Author</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <% } %>
+
+        <!-- END OF THREAD CONTRIBUTOR CARDS -->
+
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/common_head_dependencies.ejs %>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- CONTAINER START -->
+    <div class="container">
+        <% include partials/navbar.ejs %>
+        <!-- THREAD CREATOR CARD -->
+        <div class="card">
+            <div class="card-header">
+                <strong>VIEWING POSTS FROM <%=username%></strong>
+            </div>
+        </div>
+        <!-- END OF THREAD CREATOR CARD -->
+
+        <% for(let created_thread of created_threads){ %>
+            <div class="card">
+                <div class="card-header">
+                    <a href="/thread/<%=created_thread.id %>">
+                        <strong><%=created_thread.title %></strong>
+                    </a>
+                </div>
+            </div>
+        <% } %>
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+</body>
+
+</html>
